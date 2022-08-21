@@ -47,9 +47,13 @@ export default function Navbar() {
                   <a className="dropdown-item" href="/orders">
                     Orders
                   </a>
-                  {currentUser._id=="6302541fba29b1e935f2cf68" ? (<a className="dropdown-item" href="/admin">Admin</a>):
-             (<a className="dropdown-item">Not Admin</a>)
-             } 
+                  {currentUser._id == "6302541fba29b1e935f2cf68" ? (
+                    <a className="dropdown-item" href="/admin">
+                      Admin
+                    </a>
+                  ) : (
+                    <a className="dropdown-item">Not Admin</a>
+                  )}
                   <a
                     className="dropdown-item"
                     href="#"
