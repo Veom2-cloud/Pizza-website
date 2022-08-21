@@ -1,35 +1,35 @@
-export const cartReducer=(state={cartItems : []} , action)=>{
-
-    switch (action.type)
-    {
-        case 'ADD_TO_CART' : 
-        
-        const alreadyExists = state.cartItems.find(item=> item._id===action.payload._id)
-        if(alreadyExists)
-        {
-               return{
-                   ...state , 
-                   cartItems : state.cartItems.map(item=> item._id===action.payload._id ? action.payload : item)
-               }
-        }
-        else{
-        return{
-            
-            ...state , 
-            cartItems:[...state.cartItems , action.payload]
-
-        }
-
-   
-    }
-    case 'DELETE_FROM_CART' : return{
-        
-        ...state , 
-        cartItems : state.cartItems.filter(item => item._id !==action.payload._id)
-
-    }
-       default : return state
-    }
-        
-
-}
+export const cartReducer = (state = { cartItems: [] }, action) => {
+  switch (action.type) {
+    case "ADD_TO_CART":
+      const alreadyExists = state.cartItems.find(
+        (item) =>
+          item.varient === action.payload.varient &&
+          item.name === action.payload.name
+      );
+      if (alreadyExists) {
+        return {
+          ...state,
+          cartItems: state.cartItems.map((item) =>
+            item.varient === action.payload.varient &&
+            item.name === action.payload.name
+              ? action.payload
+              : item
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          cartItems: [...state.cartItems, action.payload],
+        };
+      }
+    case "DELETE_FROM_CART":
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(
+          (item) => item.price !== action.payload.price
+        ),
+      };
+    default:
+      return state;
+  }
+};

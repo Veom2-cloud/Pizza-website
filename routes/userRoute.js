@@ -11,6 +11,7 @@ router.post("/register", async(req, res) => {
     try {
         newUser.save()
         res.send('User Registered successfully')
+        window.location.href = "/login";
     } catch (error) {
          return res.status(400).json({ message: error });
     }

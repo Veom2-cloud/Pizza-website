@@ -53,8 +53,10 @@ export default function Addpizza() {
             type="text"
             placeholder="name"
             value={name}
+            required
             onChange={(e) => {
               setname(e.target.value);
+              
             }}
           />
           <input
@@ -62,8 +64,10 @@ export default function Addpizza() {
             type="text"
             placeholder="small varient price"
             value={smallprice}
+            required
             onChange={(e) => {
               setsmallprice(e.target.value);
+            
             }}
           />
           <input
@@ -71,6 +75,7 @@ export default function Addpizza() {
             type="text"
             placeholder="medium varient price"
             value={mediumprice}
+            required
             onChange={(e) => {
               setmediumprice(e.target.value);
             }}
@@ -80,6 +85,7 @@ export default function Addpizza() {
             type="text"
             placeholder="large varient price"
             value={largeprice}
+            required
             onChange={(e) => {
               setlargeprice(e.target.value);
             }}
@@ -89,6 +95,7 @@ export default function Addpizza() {
             type="text"
             placeholder="category"
             value={category}
+            required
             onChange={(e) => {
               setcategory(e.target.value);
             }}
@@ -98,6 +105,7 @@ export default function Addpizza() {
             type="text"
             placeholder="description"
             value={description}
+            required
             onChange={(e) => {
               setdescription(e.target.value);
             }}
@@ -107,6 +115,7 @@ export default function Addpizza() {
             type="text"
             placeholder="image url"
             value={image}
+            required
             onChange={(e) => {
               setimage(e.target.value);
             }}

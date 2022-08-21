@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             {currentUser ? (
-              <div className="dropdown mt-2">
+              <div className="dropdown mt-2 mr-2">
                 <a
                   style={{ color: "black" }}
                   className="dropdown-toggle"
@@ -47,7 +47,7 @@ export default function Navbar() {
                   <a className="dropdown-item" href="/orders">
                     Orders
                   </a>
-                  {currentUser._id=="62fe879f40cbea871e5d091f" ? (<a className="dropdown-item" href="/admin">Admin</a>):
+                  {currentUser._id=="6302541fba29b1e935f2cf68" ? (<a className="dropdown-item" href="/admin">Admin</a>):
              (<a className="dropdown-item">Not Admin</a>)
              } 
                   <a
