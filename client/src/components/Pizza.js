@@ -18,6 +18,7 @@ export default function Pizza({ pizza }) {
 
   function addtocart() {
     dispatch(addToCart(pizza, quantity, varient));
+    alert("You have added the pizza to cart")
   }
 
   return (
