@@ -84,3 +84,20 @@ td , th , tr{
   background-size: cover !important;
   height:90vh;
 }
+
+@media only screen and (max-width: 600px) {
+  .r2 {
+   margin-left: 20px !important;
+  }
+  .r3{
+    text-align: right !important;
+  }
+  .y1::after{
+    content: "\a" !important;
+    white-space: pre !important;
+}
+.y3::before{
+  content: "\a" !important;
+  white-space: pre !important;
+}
+}

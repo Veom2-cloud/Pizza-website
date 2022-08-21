@@ -23,7 +23,7 @@ export default function Ordersscreen() {
         <div>
             <h2 style={{fontSize:'35px'}}>My Orders</h2>
             <hr/>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center r1">
                 {loading && (<Loading/>)}
                 {error && (<Error error='Something went wrong'/>)}
                 {orders && orders.map(order=>{
