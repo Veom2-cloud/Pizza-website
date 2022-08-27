@@ -28,16 +28,19 @@ export default function Pizza({ pizza }) {
         <div
           style={{
             margin: "30px 50px 50px 50px",
-            height: "600px",
+            height: "500px",
             background: "green",
           }}
           className="shadow p-3 mb-5 bg-white rounded "
         >
           <div>
             <h1>{pizza.name}</h1>
+            <br>
+            </br>
+            
             <img
               src={pizza.image}
-              className="img-fluid"
+              className=""
               style={{ height: "200px", weight: "200px" }}
               alt="img"
             ></img>
