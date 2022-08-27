@@ -28,7 +28,7 @@ export default function Pizza({ pizza }) {
         <div
           style={{
             margin: "20px 20px 30px 20px",
-            height: "500px",
+            height: "460px",
             background: "green",
           }}
           className="shadow p-3 mb-5 bg-white rounded "
