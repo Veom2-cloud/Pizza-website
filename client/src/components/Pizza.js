@@ -41,7 +41,7 @@ export default function Pizza({ pizza }) {
             <img
               src={pizza.image}
               className=""
-              style={{ height: "200px", weight: "150px" }}
+              style={{ height: "200px", weight: "100px" }}
               alt="img"
             ></img>
           </div>
