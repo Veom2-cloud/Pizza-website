@@ -27,15 +27,14 @@ export default function Pizza({ pizza }) {
         <div data-aos="zoom-in" ></div>
         <div
           style={{
-            margin: "30px 50px 50px 50px",
-            height: "500px",
+            margin: "20px 20px 30px 20px",
+            height: "550px",
             background: "green",
           }}
           className="shadow p-3 mb-5 bg-white rounded "
         >
           <div>
             <h1>{pizza.name}</h1>
-            <br></br>
             <img
               src={pizza.image}
               className="img-fluid"
