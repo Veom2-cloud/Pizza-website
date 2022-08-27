@@ -34,7 +34,7 @@ export default function Orderslist() {
           {orders &&
             orders.map((order) => {
               return (
-                <tr>
+                <tr key={order._id}>
                   <td>{order._id}</td>
                   <td>{order.email}</td>
                   <td>{order.userid}</td>

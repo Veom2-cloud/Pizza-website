@@ -32,7 +32,7 @@ export default function Pizzaslist() {
         <tbody>
         {pizzas && pizzas.map(pizza=>{
 
-            return <tr>
+            return <tr key={pizza._id}>
                 <td>{pizza.name}</td>
                 <td>
 

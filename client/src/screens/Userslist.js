@@ -33,7 +33,7 @@ export default function Userslist() {
           {users &&
             users.map((user) => {
               return (
-                <tr>
+                <tr key={user._id}>
                   <td>{user._id}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
