@@ -10,7 +10,6 @@ import Registerscreen from "./screens/Registerscreen";
 import Loginscreen from "./screens/Loginscreen";
 import Ordersscreen from "./screens/Ordersscreen";
 import Adminscreen from "./screens/Adminscreen";
-import Detailscreen from "./screens/Detailscreen";
 function App() {
   return (
     <div className="App">
@@ -23,7 +22,6 @@ function App() {
         <Route path="/login" exact component={Loginscreen} />
         <Route path="/orders" exact component={Ordersscreen} />
         <Route path="/admin" component={Adminscreen} />
-        <Route path="/pizza/:pizzaid" component={Detailscreen} exact />
       </BrowserRouter>
     </div>
   );

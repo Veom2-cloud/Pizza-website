@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { addToCart } from "../actions/cartActions";
 import { useDispatch } from "react-redux";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 import "aos/dist/aos.css";
 
 export default function Pizza({ pizza }) {
   AOS.init({});
   const [quantity, setquantity] = useState(1);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [varient, setvarient] = useState("small");
 
   const dispatch = useDispatch();
@@ -20,10 +24,7 @@ export default function Pizza({ pizza }) {
   return (
     <div key={pizza._id}
     >
-      <Link
-        to={`/pizza/${pizza._id}`}
-        style={{ textDecoration: "none", color: "black" }}
-      >
+     
         <div data-aos="zoom-in" ></div>
         <div
           style={{
@@ -33,7 +34,7 @@ export default function Pizza({ pizza }) {
           }}
           className="shadow p-3 mb-5 bg-white rounded "
         >
-          <div>
+          <div onClick={handleShow}>
             <h1>{pizza.name}</h1>
             <img
               src={pizza.image}
@@ -90,8 +91,25 @@ export default function Pizza({ pizza }) {
               </button>
             </div>
           </div>
+
         </div>
-      </Link>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{pizza.name}</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <img src={pizza.image} className="img-fluid" style={{height:'200px'}}/>
+          <hr></hr>
+          <p>{pizza.description}</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <button className="btn" onClick={handleClose}>
+            CLOSE
+          </button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
