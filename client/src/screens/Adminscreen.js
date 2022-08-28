@@ -23,7 +23,7 @@ export default function Adminscreen() {
   return (
     <div>
       <div className="row justify-content-center p-3">
-        <div className="col-md-10">
+        <div className="col-md-12">
           <h2 style={{ fontSize: "35px" }}>Admin Panel</h2>
 
           <ul className="adminfunctions">
