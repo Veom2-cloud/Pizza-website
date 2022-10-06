@@ -19,7 +19,7 @@ export default function Orderslist() {
       <table className="table table-striped table-bordered table-responsive-sm">
         <thead className="thead-dark">
           <tr>
-            <th>Order Id</th>
+            <th>Order Item</th>
             <th>Email</th>
             <th>User Id</th>
             <th>Amount</th>
@@ -34,7 +34,11 @@ export default function Orderslist() {
             orders.map((order) => {
               return (
                 <tr key={order._id}>
-                  <td>{order._id}</td>
+                  <td>{order.orderItems.map(item=>{
+                                        return <div>
+                                            <p>{item.name} [{item.varient}] * {item.quantity} = {item.price}</p>
+                                        </div>
+                                    })}</td>
                   <td>{order.email}</td>
                   <td>{order.userid}</td>
                   <td>{order.orderAmount}</td>
