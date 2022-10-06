@@ -21,7 +21,6 @@ export default function Orderslist() {
           <tr>
             <th>Order Item</th>
             <th>Email</th>
-            <th>User Id</th>
             <th>Amount</th>
             <th>Date</th>
             <th>Status</th>
@@ -40,7 +39,6 @@ export default function Orderslist() {
                                         </div>
                                     })}</td>
                   <td>{order.email}</td>
-                  <td>{order.userid}</td>
                   <td>{order.orderAmount}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
                   <td>
