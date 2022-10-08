@@ -1,5 +1,4 @@
 import React from "react";
-import { deletePizza} from "../actions/pizzaActions";
 import { useDispatch, useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { placeOrder } from "../actions/orderActions";
@@ -11,9 +10,7 @@ export default function Checkout({ subtotal }) {
   const { loading, error, success } = orderstate;
   const dispatch = useDispatch();
   
-  const pizzasstate = useSelector((state) => state.getAllPizzasReducer);
-
-  const { pizzas } = pizzasstate;
+  
   
   function tokenHander(token) {
     console.log(token);
@@ -22,7 +19,6 @@ export default function Checkout({ subtotal }) {
   function abc() {
     if (localStorage.getItem("currentUser")) {
       const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-      dispatch(deletePizza(pizza._id));
     } else {
       alert("Please Login to buy the pizza");
       window.location.href = "/login";
