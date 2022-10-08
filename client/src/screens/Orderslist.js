@@ -21,6 +21,7 @@ export default function Orderslist() {
           <tr>
             <th>Order Item</th>
             <th>Email</th>
+<th>Address</th>
             <th>Amount</th>
             <th>Date</th>
             <th>Status</th>
@@ -35,10 +36,15 @@ export default function Orderslist() {
                 <tr key={order._id}>
                   <td>{order.orderItems.map(item=>{
                                         return <div>
-                                            <p>{item.name} [{item.varient}] * {item.quantity} = {item.price}</p>
+                                            <p>{item.name} [{item.varient}] * {item.quantity}</p>
                                         </div>
                                     })}</td>
                   <td>{order.email}</td>
+<td> <p>Street : {order.shippingAddress.street}</p>
+                                <p>City : {order.shippingAddress.city}</p>
+                                <p>Country : {order.shippingAddress.country}</p>
+                                <p>Pincode : {order.shippingAddress.pincode}</p>
+                                      </td>
                   <td>{order.orderAmount}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
                   <td>
