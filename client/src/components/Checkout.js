@@ -16,6 +16,7 @@ export default function Checkout({ subtotal }) {
   function abc() {
     if (localStorage.getItem("currentUser")) {
       const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      dispatch(deletePizza(pizza._id));
     } else {
       alert("Please Login to buy the pizza");
       window.location.href = "/login";
