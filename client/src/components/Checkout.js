@@ -10,6 +10,11 @@ export default function Checkout({ subtotal }) {
   const orderstate = useSelector((state) => state.placeOrderReducer);
   const { loading, error, success } = orderstate;
   const dispatch = useDispatch();
+  
+  const pizzasstate = useSelector((state) => state.getAllPizzasReducer);
+
+  const { pizzas } = pizzasstate;
+  
   function tokenHander(token) {
     console.log(token);
     dispatch(placeOrder(token, subtotal));
